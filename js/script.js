@@ -35,14 +35,14 @@ const numberOne = +prompt("введи первое число");
 const numberTwo = +prompt("введи второе число");
 const signifier = prompt("выберите нужную арифметическую операцию", "+-/*");
 if (signifier === "+") {
-  console.log(+numberOne+numberTwo);
+  console.log(numberOne+numberTwo);
 }
 if (signifier === "-") {
-  console.log(+numberOne-numberTwo);
+  console.log(numberOne-numberTwo);
 }
 if (signifier === "/") {
-  console.log(+numberOne/numberTwo);
+  console.log(numberOne/numberTwo);
 }
 if (signifier === "*") {
-  console.log(+numberOne*numberTwo);
+  console.log(numberOne*numberTwo);
 }
