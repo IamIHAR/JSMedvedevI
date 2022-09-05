@@ -9,7 +9,10 @@ if (
   alert(`Здравствуйте ${nameUser} ${lastNameUser}`);
 } else if (!nameUser && lastNameUser && nickUser) {
   alert(`Здравствуйте ${nickUser}`);
-} else if (nameUser && !lastNameUser && nickUser) {
+} else if (
+  (nameUser && !lastNameUser && nickUser) ||
+  (nameUser && !lastNameUser && !nickUser)
+) {
   alert(`Здравствуйте ${nameUser} `);
 } else if (
   (!nameUser && !lastNameUser && !nickUser) ||
@@ -38,48 +41,49 @@ isNaN(result) ? alert("введите цифры!") : alert(result);
 
 const yourName = prompt("Введите Имя");
 const age = +prompt("Введите возраст");
-age > 17? alert(`Добро пожаловать ${yourName}`) : alert(`Простите, ${yourName}, доступ закрыт`);
+age > 17
+  ? alert(`Добро пожаловать ${yourName}`)
+  : alert(`Простите, ${yourName}, доступ закрыт`);
 
-const num = prompt("Введите число");
-if (num > 10){
-    alert('Вы превысили значение')
+const num = +prompt("Введите число");
+if (num > 10) {
+  alert("Вы превысили значение");
 }
-if(isNaN(num)) {
-    alert('Вы ввели некорректное значение')
+if (isNaN(num)) {
+  alert("Вы ввели некорректное значение");
 }
 switch (num) {
-  case 0:
+  case "0":
     alert("ноль");
     break;
-  case '1':
+  case "1":
     alert("один");
     break;
-  case '2':
+  case "2":
     alert("два");
     break;
-  case '3':
+  case "3":
     alert("три");
     break;
-  case '4':
+  case "4":
     alert("четыре");
     break;
-  case '5':
+  case "5":
     alert("пять");
     break;
-  case '6':
+  case "6":
     alert("шесть");
     break;
-  case '7':
+  case "7":
     alert("семь");
     break;
-  case '8':
+  case "8":
     alert("восемь");
     break;
-  case '9':
+  case "9":
     alert("девять");
     break;
-  case '10':
+  case "10":
     alert("десять");
     break;
 }
-
